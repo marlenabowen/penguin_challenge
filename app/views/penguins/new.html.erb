@@ -1,0 +1,17 @@
+<h1>New Penguin</h1>
+
+<%= form_with scope: :penguin, url: penguins_path, local: true do |form| %>
+  <p>
+    <%= form.label :species %><br>
+    <%= form.text_field :species %>
+  </p>
+
+  <p>
+    <%= form.label :image %><br>
+    <%= form.file_field :image, accept: 'image/png,image/jpeg'%>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

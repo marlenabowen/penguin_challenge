@@ -1,0 +1,12 @@
+<h1>Penguins</h1>
+<% @penguins.each do |penguin| %>
+  <p>
+  <h2 class="penguin-species"><%= link_to "#{penguin.species}", penguin_path(penguin) %>
+  </p>
+
+  <p>
+    <% if penguin.image.attached? %>
+      <%= image_tag(penguin.image, class: "penguin-image", height: 500) %>
+    <% end %>
+  </p>
+<% end %>

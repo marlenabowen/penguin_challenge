@@ -1,0 +1,10 @@
+<p>
+  <strong>Species:</strong>
+  <%= @penguin.species %>
+</p>
+
+<p>
+  <% if @penguin.image.attached? %>
+    <%= image_tag(@penguin.image, height: 500) %>
+  <% end %>
+</p>
